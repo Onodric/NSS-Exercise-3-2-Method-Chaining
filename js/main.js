@@ -6,3 +6,5 @@
 // 4. Then output (either in the DOM or the console) the sum of all the resulting numbers.
 
 var integers = [13, 25, 6, 3, 11, 2, 18, 7, 21, 1, 29, 20, 12, 8];
+
+document.getElementById("outputHere").innerHTML = integers.sort(function(a,b){return a-b}).filter(function(a){return a<20}).map(function(a){return a*1.5-1}).reduce(function(preValue, curValue, index, array) {return preValue + curValue;});
